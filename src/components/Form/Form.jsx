@@ -88,7 +88,7 @@ const Form = () => {
 
     return (
         <div className={"form"}>
-            <h3>Введите ваши временные\n(учитываются на 80%)</h3>
+            <h3>Введите ваши временные(учитываются на 80%)</h3>
             <input
                 className={'input'}
                 type="text"
