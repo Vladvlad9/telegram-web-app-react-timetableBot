@@ -81,10 +81,14 @@ const Form = () => {
         setSunday(e.target.value)
     }
 
+    const onChangeDescription = (e) => {
+        setDescription(e.target.value)
+    }
+
 
     return (
         <div className={"form"}>
-            <h3>Введите ваши данные</h3>
+            <h3>Введите ваши временные(учитываются на 80%)</h3>
             <input
                 className={'input'}
                 type="text"
@@ -139,6 +143,7 @@ const Form = () => {
                 type="text"
                 placeholder={'Пожелание'}
                 value={Description}
+                onChange={onChangeDescription}
             />
 
             {/*<select value={subject} onChange={onChangeSubject} className={'select'}>*/}
