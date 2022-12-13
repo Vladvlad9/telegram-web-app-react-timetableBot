@@ -120,7 +120,7 @@ const Form = () => {
             <input
                 className={'input'}
                 type="text"
-                placeholder={'Четверг'}
+                placeholder={'Пятница'}
                 value={Friday}
                 onChange={onChangeFriday}
             />
