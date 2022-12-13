@@ -10,6 +10,7 @@ const Form = () => {
     const [Friday, setFriday] = useState('');
     const [Saturday, setSaturday] = useState('');
     const [Sunday, setSunday] = useState('');
+    const [Description, setDescription] = useState('');
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
@@ -20,10 +21,11 @@ const Form = () => {
             Thursday,
             Friday,
             Saturday,
-            Sunday
+            Sunday,
+            Description
         }
         tg.sendData(JSON.stringify(data));
-    }, [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, tg])
+    }, [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, Description, tg])
 
 
     useEffect(() => {
@@ -36,7 +38,7 @@ const Form = () => {
 
     useEffect(() => {
         tg.MainButton.setParams({
-            text: 'Отправить данные'
+            text: 'Отправить расписание'
         })
     }, [tg])
 
@@ -131,6 +133,12 @@ const Form = () => {
                 placeholder={'Воскресенье'}
                 value={Sunday}
                 onChange={onChangeSunday}
+            />
+            <input
+                className={'input'}
+                type="text"
+                placeholder={'Пожелание'}
+                value={Description}
             />
 
             {/*<select value={subject} onChange={onChangeSubject} className={'select'}>*/}
