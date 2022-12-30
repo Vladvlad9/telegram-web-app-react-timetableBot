@@ -106,7 +106,7 @@ const Form = () => {
             <input
                 className={'input'}
                 type="text"
-                placeholder={'Вторник'}
+                placeholder={'Среда'}
                 value={Wednesday}
                 onChange={onChangeWednesday}
             />
